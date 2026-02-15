@@ -1,28 +1,15 @@
 import mdx from '@astrojs/mdx';
-import node from '@astrojs/node';
+// import node from '@astrojs/node'; // Ya no lo necesitas
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 import expressiveCode from 'astro-expressive-code';
-import { loadEnv } from 'vite';
-import spectre, { type GiscusMapping } from './package/src';
+import spectre from './package/src';
 import { spectreDark } from './src/ec-theme';
-
-const {
-	GISCUS_REPO,
-	GISCUS_REPO_ID,
-	GISCUS_CATEGORY,
-	GISCUS_CATEGORY_ID,
-	GISCUS_MAPPING,
-	GISCUS_STRICT,
-	GISCUS_REACTIONS_ENABLED,
-	GISCUS_EMIT_METADATA,
-	GISCUS_LANG,
-} = loadEnv(process.env.NODE_ENV!, process.cwd(), '');
 
 // https://astro.build/config
 const config = defineConfig({
 	site: 'https://smonroyma.github.io',
-	output: 'static',
+	output: 'static', // Correcto para GitHub Pages
 	integrations: [
 		expressiveCode({
 			themes: [spectreDark],
@@ -30,36 +17,30 @@ const config = defineConfig({
 		mdx(),
 		sitemap(),
 		spectre({
-			name: 'Spectre',
+			name: 'Santiago Monroy', // Pon tu nombre real aquí
 			openGraph: {
 				home: {
-					title: 'Spectre',
-					description: 'A minimalistic theme for Astro.',
+					title: 'Presentación - Santiago Monroy',
+					description: 'Portafolio para la asignatura de Bases de Datos 1.',
 				},
 				blog: {
-					title: 'Blog',
-					description: 'News and guides for Spectre.',
+					title: 'Evidencias',
+					description: 'Seguimiento del curso de Bases de Datos.',
 				},
 				projects: {
-					title: 'Projects',
+					title: 'Proyecto Final',
 				},
 			},
+			// COMENTAMOS GISCUS PARA QUE NO DE ERROR
+			/*
 			giscus: {
 				repository: GISCUS_REPO,
-				repositoryId: GISCUS_REPO_ID,
-				category: GISCUS_CATEGORY,
-				categoryId: GISCUS_CATEGORY_ID,
-				mapping: GISCUS_MAPPING as GiscusMapping,
-				strict: GISCUS_STRICT === 'true',
-				reactionsEnabled: GISCUS_REACTIONS_ENABLED === 'true',
-				emitMetadata: GISCUS_EMIT_METADATA === 'true',
-				lang: GISCUS_LANG,
+				...
 			},
+			*/
 		}),
 	],
-	adapter: node({
-		mode: 'standalone',
-	}),
+	// ELIMINAMOS EL ADAPTER DE NODE
 });
 
 export default config;

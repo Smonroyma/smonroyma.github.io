@@ -1,15 +1,13 @@
 import mdx from '@astrojs/mdx';
-// import node from '@astrojs/node'; // Ya no lo necesitas
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 import expressiveCode from 'astro-expressive-code';
 import spectre from './package/src';
 import { spectreDark } from './src/ec-theme';
 
-// https://astro.build/config
-const config = defineConfig({
+export default defineConfig({
 	site: 'https://smonroyma.github.io',
-	output: 'static', // Correcto para GitHub Pages
+	output: 'static',
 	integrations: [
 		expressiveCode({
 			themes: [spectreDark],
@@ -17,30 +15,21 @@ const config = defineConfig({
 		mdx(),
 		sitemap(),
 		spectre({
-			name: 'Santiago Monroy', // Pon tu nombre real aquí
+			name: 'Santiago Monroy', 
 			openGraph: {
 				home: {
 					title: 'Presentación - Santiago Monroy',
-					description: 'Portafolio para la asignatura de Bases de Datos 1.',
+					description: 'E-portafolio para la asignatura de Bases de Datos 1.',
 				},
 				blog: {
 					title: 'Evidencias',
-					description: 'Seguimiento del curso de Bases de Datos.',
+					description: 'Seguimiento del curso de Bases de Datos 1.',
 				},
 				projects: {
 					title: 'Proyecto Final',
 				},
 			},
-			// COMENTAMOS GISCUS PARA QUE NO DE ERROR
-			/*
-			giscus: {
-				repository: GISCUS_REPO,
-				...
-			},
-			*/
+			giscus: undefined 
 		}),
 	],
-	// ELIMINAMOS EL ADAPTER DE NODE
 });
-
-export default config;

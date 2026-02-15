@@ -5,6 +5,7 @@ import expressiveCode from 'astro-expressive-code';
 import spectre from './package/src';
 import { spectreDark } from './src/ec-theme';
 
+// https://astro.build/config
 export default defineConfig({
 	site: 'https://smonroyma.github.io',
 	output: 'static', // GitHub Pages necesita esto

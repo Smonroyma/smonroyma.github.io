@@ -16,7 +16,7 @@ export default defineConfig({
 		mdx(),
 		sitemap(),
 		spectre({
-			name: 'Santiago Monroy',
+			name: 'Santiago Monroy Manrique 🥷',
 			openGraph: {
 				home: {
 					title: 'Presentación - Santiago Monroy',

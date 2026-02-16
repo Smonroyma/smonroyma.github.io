@@ -1,11 +1,39 @@
 [
+    {
+        "id": 1,
+        "icon": {
+            "type": "lucide",
+            "name": "github"
+        },
+        "text": "GitHub",
+        "link": "https://github.com/smonroyma"
+    },
+    {
+        "id": 2,
+        "icon": {
+            "type": "lucide",
+            "name": "linkedin"
+        },
+        "text": "LinkedIn",
+        "link": "https://www.linkedin.com/in/smonroymanrique"
+    },
+    {
+        "id": 3,
+        "icon": {
+            "type": "lucide",
+            "name": "music"
+        },
+        "text": "Spotify",
+        "link": "https://open.spotify.com/user/vgqi0emkvlvsauwdiznt6u58t?si=3dc6aad4e4014f62&nd=1&dlsi=9c14bf2e710e400f"
+    },
+
 	{
-		"id": 1,
-		"icon": {
-			"type": "lucide",
-			"name": "github"
-		},
-		"text": "GitHub",
-		"link": "https://github.com/louisescher/spectre"
-	}
+    "id": 4,
+    "icon": {
+        "type": "lucide",
+        "name": "mail"
+    },
+    "text": "Correo Electrónico",
+    "link": "mailto:smonroyma@unbosque.edu.co"
+}
 ]

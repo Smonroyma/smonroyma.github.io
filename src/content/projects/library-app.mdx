@@ -1,8 +1,7 @@
 ---
 title: Library Management System
 date: 02-15-2026
-description: Sistema de gestión de biblioteca en Java con sincronización automática en Google Drive y reportes PDF con plantilla institucional
-image: ../assets/library-app.png
+description: Sistema de gestión de biblioteca en Java con sincronización automática en Google Drive y reportes PDF con plantilla institucional.
 link: https://github.com/mmolinasdev/LibraryApp
 info:
   - text: GitHub
@@ -30,11 +29,17 @@ Sistema de gestión de biblioteca desarrollado en **Java** con persistencia en a
 
 ### 👤 Funcionalidades Core
 
-- **👤 Gestión de Usuarios**: Crear, actualizar, eliminar y buscar usuarios
-- **📖 Gestión de Libros**: CRUD completo para libros
-- **📋 Gestión de Préstamos**: Registro de préstamos y devoluciones con control de fechas
-- **🔍 Sistema de Búsqueda**: Buscar usuarios por nombre, libros por título, préstamos por usuario
-- **📊 Reportes en PDF**: Generación automática con plantilla institucional (Universidad El Bosque, Facultad, fecha automática)
-- **☁️ Sincronización Google Drive**: Colaboración en tiempo real entre miembros del equipo
+- **👤 Gestión de Usuarios**: Crear, actualizar, eliminar y buscar usuarios.
+- **📖 Gestión de Libros**: CRUD completo para libros.
+- **📋 Gestión de Préstamos**: Registro de préstamos y devoluciones con control de fechas.
+- **🔍 Sistema de Búsqueda**: Buscar usuarios por nombre, libros por título, préstamos por usuario.
+- **📊 Reportes en PDF**: Generación automática con plantilla institucional (Universidad El Bosque).
+- **☁️ Sincronización Google Drive**: Colaboración en tiempo real entre miembros del equipo.
 
 ### 🏗️ Arquitectura y Patrones
+
+- **Patrón DAO (Data Access Object)**: Implementado para separar la lógica de negocio del almacenamiento de datos.
+- **Google Drive API**: Integración mediante OAuth2 para asegurar que los datos del equipo estén siempre sincronizados.
+- **Generación de Documentos**: Uso de librerías especializadas para la exportación de reportes PDF con formato profesional.
+
+---

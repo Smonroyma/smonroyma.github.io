@@ -14,20 +14,41 @@ info:
 
 # Modelado de Base de Datos
 
-Proyecto de modelado de datos para la asignatura de Bases de Datos 1.
+## Modelado de la biblioteca:
 
-## Conceptos Cubiertos
+Crear un diseño E/R que permita gestionar los datos de una
+biblioteca de modo que:
 
-- Entidades y relaciones
-- Diagramas E-R
-- Atributos y claves
-- Cardinalidades
+• Las personas socias de la biblioteca disponen de un código de
+socio y además necesitar almacenar su cédula, dirección,
+teléfono, nombre y apellidos.
 
-## Herramientas Utilizadas
+• La biblioteca almacena libros que presta a los socios, de ellos
+se almacena su título, año en el que se escribió el libro,
+nombre completo del autor (o autores), año en que se editó,
+en qué editorial fue y el ISBN.
 
-- Lucidchart
-- MySQL Workbench
+• Necesitamos poder indicar si un libro en la biblioteca está
+dañado o no.
+37
 
-## Resultado
+<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/2a41b772-494d-4108-9ebb-302d3efd2028" id="ugzxCLu-o93W"></iframe></div>
 
-Diseño normalizado de una base de datos completa.
+
+## Modelado de la Aerolínea:
+
+Una aerolínea requiere una base de datos relacional para registrar sus
+operaciones. Las características del negocio son las siguientes:
+• La aerolínea tiene tres recursos principales: Aviones, pilotos y tripulación.
+• Los aviones tienen un código (número de cola), un tipo de avión y una base
+a donde pertenece y debe regresar cada número de horas.
+• Los pilotos tienen un código, nombre y horas de vuelo.
+• Los miembros de la tripulación tienen un código, nombre y teléfonos.
+• Pilotos y tripulación tienen una base a la que regresan después de cada
+jornada.
+• Los vuelos van desde un origen a un destino a una hora concreta y tiene un
+número de vuelo.
+36
+
+
+<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/a37a9e82-c26c-4b8a-bae7-484582c94c99" id="zczxNSvrA2je"></iframe></div>
